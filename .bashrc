@@ -16,7 +16,7 @@ fi
 
 # User specific environment
 PATH="$HOME/.local/bin:$HOME/bin:$PATH:/usr/lib64/openmpi/bin:/home/slycooper/matlab/bin"
-export LD_LIBRARY_PATH="/usr/local/lib:/usr/local/lib64"
+#export LD_LIBRARY_PATH="/usr/local/lib:/usr/local/lib64"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 

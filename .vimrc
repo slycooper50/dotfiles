@@ -36,6 +36,9 @@ Plug 'moll/vim-bbye'
 
 "Color Schemes
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'ghifarit53/daycula-vim'
+Plug 'bluz71/vim-nightfly-colors'
 
 "Fugitive
 Plug 'tpope/vim-fugitive'
