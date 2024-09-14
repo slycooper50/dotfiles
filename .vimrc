@@ -9,6 +9,7 @@ set ignorecase
 set nowrap
 set bg=dark
 set hlsearch
+set termguicolors
 autocmd VimEnter * hi Folded ctermbg=238 ctermfg=white
 autocmd VimEnter * NERDTree
 
