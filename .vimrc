@@ -9,7 +9,6 @@ set ignorecase
 set nowrap
 set bg=dark
 set hlsearch
-set termguicolors
 autocmd VimEnter * hi Folded ctermbg=238 ctermfg=white
 autocmd VimEnter * NERDTree
 
@@ -84,15 +83,18 @@ let g:airline#extensions#tabline#buffer_nr_show = 1   " show buffer number
 
 
 "Command for using termdebug
+command -nargs=1 -complete=file GDB call Debug(<f-args>)
 function Debug(arg)
 	packadd termdebug
 	exe "Termdebug" a:arg
 	exe "normal \<C-W>10\+"
-	Source
-	vertical res 160
+	vertical res 70
+	"call win_gotoid(win_getid(4))
+	"call win_gotoid(win_getid(2))
 	echo a:arg
 endfunction
-let g:termdebug_wide=160
+let g:termdebug_config = {}
+let g:termdebug_config['wide'] = 160
 command -nargs=1 Debug :call Debug(<f-args>)
 command -nargs=0 DebugFlow :call Debug('opm-simulators/build/bin/flow')
 
